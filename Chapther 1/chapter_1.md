@@ -18,6 +18,7 @@ cv.imshow("Img CV2", img)
 cv.waitKey(0)
 ```
 > Result:
+> 
 > ![Result Code](../src/results/result_01.png)
 
 Line code for closing image
@@ -90,6 +91,7 @@ while True:
 ```
 
 > Result:
+> 
 > ![Result Code](../src/results/result_02.gif)
 
 Line code for closing video capture
@@ -145,4 +147,5 @@ cv.destroyWindow('Webcam CV2')
 ```
 
 > Result:
+> 
 > ![Result Code](../src/results/result_03.gif)

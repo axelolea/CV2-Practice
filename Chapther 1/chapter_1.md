@@ -1,24 +1,4 @@
-# Introducing a OpenCV Module
-
-The OpenCV( Open Source Computer Vision) is a library of Python bindings designed to solve computer vision problems.
-
-## Install and use Module
-
-Install cv2 module with pip in cosole
-
-```bash
-pip install opencv-python
-```
-
-Import module in your project
-
-```python
-# Import the cv2 module, and rename 'cv'
-
-import cv2 as cv
-```
-
-### Read a image file
+# Read a image file
 ```python
 # My directory files
 
@@ -78,7 +58,7 @@ ascii_value =  cv.waitKey() # 10 milliseconds waiting
 cv.destroyWindow('Name Window')
 ```
 
-### Read a video file
+# Read a video file
 
 ```python
 # Read the video file
@@ -142,7 +122,7 @@ success, img_frame = cap.read()
 cap.release()
 ```
 
-### Read a video file
+# Read a video file
 
 ```python
 # Capture webcam

@@ -1,7 +1,8 @@
 import cv2 as cv
 
-DIR_IMAGES = '../images/'
-DIR_VIDEO = '../video/'
+# Directories resources
+DIR_IMAGES = '..\\src\\images\\'
+DIR_VIDEO = '..\\src\\videos\\'
 
 def img_show() -> None:
     """Display the images with CV2 Module.
@@ -11,17 +12,22 @@ def img_show() -> None:
     cv.waitKey(0)
     cv.destroyWindow('Img CV2')
 
-img_show()
 
 def vid_show():
+    """Display the video with CV2 Module.
+    """
     cap = cv.VideoCapture(DIR_VIDEO + 'video_01.mp4')
     while True:
         success, img = cap.read()
-        cv.imshow("Video CV2", img)
-        if cv.waitKey(1) & 0xFF == ord('q'):
+        if success:
+            cv.imshow('Video CV2', img)
+            if cv.waitKey(1) & 0xFF == ord('q'):
+                break
+        else:
             break
+    cap.release()
+    cv.destroyWindow('Video CV2')
 
-vid_show()
 
 def webcam_show():
     cap = cv.VideoCapture(0)
@@ -30,8 +36,13 @@ def webcam_show():
     cap.set(10, 100)
     while True:
         success, img = cap.read()
-        cv.imshow("Webcam CV2", img)
+        cv.imshow('Webcam CV2', img)
         if cv.waitKey(1) & 0xFF == ord('q'):
             break
+    cap.release()
+    cv.destroyWindow('Webcam CV2')
 
+# Envocations functions
+img_show()
+vid_show()
 webcam_show()
